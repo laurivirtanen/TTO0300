@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTO0300", "TTO0300\TTO0300.csproj", "{36FF1DCA-A204-4256-9525-653DA4B293C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEHT2", "TEHT2\TEHT2.csproj", "{2934A77A-5883-4559-AA99-8DEBFEFABC93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEHT3", "TEHT3\TEHT3.csproj", "{F857FFCB-36C7-43CE-8123-0B2736BDC281}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36FF1DCA-A204-4256-9525-653DA4B293C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FF1DCA-A204-4256-9525-653DA4B293C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FF1DCA-A204-4256-9525-653DA4B293C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FF1DCA-A204-4256-9525-653DA4B293C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2934A77A-5883-4559-AA99-8DEBFEFABC93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2934A77A-5883-4559-AA99-8DEBFEFABC93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2934A77A-5883-4559-AA99-8DEBFEFABC93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2934A77A-5883-4559-AA99-8DEBFEFABC93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F857FFCB-36C7-43CE-8123-0B2736BDC281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F857FFCB-36C7-43CE-8123-0B2736BDC281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F857FFCB-36C7-43CE-8123-0B2736BDC281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F857FFCB-36C7-43CE-8123-0B2736BDC281}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
