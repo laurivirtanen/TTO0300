@@ -7,19 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="640" Width="525">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="32" Margin="360,45,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="32" Margin="360,90,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="32" Margin="360,135,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <Label x:Name="label" Content="Leveys:" HorizontalAlignment="Left" Margin="290,45,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Korkeus:" HorizontalAlignment="Left" Margin="290,90,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="K Leveys:" HorizontalAlignment="Left" Margin="290,135,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="54" Margin="360,250,0,0" VerticalAlignment="Top" Width="128" Click="OnClick"/>
-        <TextBox x:Name="PA" HorizontalAlignment="Left" Height="32" Margin="360,340,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="32" Margin="360,385,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="32" Margin="360,430,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
+        <TextBox x:Name="leveys" HorizontalAlignment="Left" Height="32" Margin="360,45,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
+        <TextBox x:Name="korkeus" HorizontalAlignment="Left" Height="32" Margin="360,90,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
+        <TextBox x:Name="karmil" HorizontalAlignment="Left" Height="32" Margin="360,135,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
+        <Label x:Name="lev" Content="Leveys:" HorizontalAlignment="Left" Margin="290,45,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="kork" Content="Korkeus:" HorizontalAlignment="Left" Margin="290,90,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="karmi" Content="K Leveys:" HorizontalAlignment="Left" Margin="290,135,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="laskin" Content="Button" HorizontalAlignment="Left" Height="54" Margin="360,250,0,0" VerticalAlignment="Top" Width="128" Click="OnClick"/>
+        <TextBox x:Name="IkkunaPa" HorizontalAlignment="Left" Height="32" Margin="360,340,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
+        <TextBox x:Name="LasinPa" HorizontalAlignment="Left" Height="32" Margin="360,385,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
+        <TextBox x:Name="KarmiPiiri" HorizontalAlignment="Left" Height="32" Margin="360,430,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
         <Label x:Name="Keskiarvo" Content="Ikkunan KA:" HorizontalAlignment="Left" Margin="290,340,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1_Copy" Content="Lasin PA:" HorizontalAlignment="Left" Margin="290,385,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2_Copy" Content="K Piiri:" HorizontalAlignment="Left" Margin="290,430,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Lasinp" Content="Lasin PA:" HorizontalAlignment="Left" Margin="290,385,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="kpiiri" Content="K Piiri:" HorizontalAlignment="Left" Margin="290,430,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
