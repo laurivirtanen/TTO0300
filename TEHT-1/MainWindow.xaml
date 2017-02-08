@@ -1,0 +1,20 @@
+﻿<Window x:Class="TEHT_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TEHT_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="180">
+    <Grid x:Name="Test">
+        <StackPanel>
+            <CheckBox x:Name="ckbMilk" Content="Milk" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <CheckBox x:Name="ckbButter" Content="Butter" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <CheckBox x:Name="ckbBeer" Content="Beer" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <CheckBox x:Name="ckbChicken" Content="Chicken" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top"/>
+            <Button x:Name="btnBuy" Content="Buy" Height="20" Width="40" Margin="10" HorizontalAlignment="Left" Click="btnBuy_Click"/>
+            <TextBox x:Name="txtBox" HorizontalAlignment="Left" Height="76" Margin="10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="133"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

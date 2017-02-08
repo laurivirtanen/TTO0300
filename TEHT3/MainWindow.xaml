@@ -11,9 +11,9 @@
         <TextBox x:Name="leveys" HorizontalAlignment="Left" Height="32" Margin="1000,45,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
         <TextBox x:Name="korkeus" HorizontalAlignment="Left" Height="32" Margin="1000,90,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
         <TextBox x:Name="karmil" HorizontalAlignment="Left" Height="32" Margin="1000,135,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
-        <Label x:Name="lev" Content="Leveys:" HorizontalAlignment="Left" Margin="900,45,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="kork" Content="Korkeus:" HorizontalAlignment="Left" Margin="900,90,0,0" VerticalAlignment="Top" Grid.Column="1"/>
-        <Label x:Name="karmi" Content="K Leveys:" HorizontalAlignment="Left" Margin="900,135,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lev" Content="Leveys(L):" HorizontalAlignment="Left" Margin="900,45,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="kork" Content="Korkeus(H):" HorizontalAlignment="Left" Margin="900,90,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="karmi" Content="K Leveys(W):" HorizontalAlignment="Left" Margin="900,135,0,0" VerticalAlignment="Top" Grid.Column="1"/>
         <Button x:Name="laskin" Content="Button" HorizontalAlignment="Left" Height="54" Margin="1000,250,0,0" VerticalAlignment="Top" Width="128" Click="OnClick" Grid.Column="1"/>
         <TextBox x:Name="ikkunaPa" HorizontalAlignment="Left" Height="32" Margin="1000,340,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
         <TextBox x:Name="lasinPa" HorizontalAlignment="Left" Height="32" Margin="1000,385,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>

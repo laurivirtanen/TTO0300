@@ -53,9 +53,10 @@ namespace TTO0300
             {
                 MessageBox.Show("Error", ex.Message);
             }
-            /* Toisen ikkunan avaamista
+            
+            
             sup supp = new TTO0300.sup();
-            supp.ShowDialog();*/
+            supp.ShowDialog();
         }
     }
 }

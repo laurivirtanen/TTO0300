@@ -42,6 +42,7 @@ namespace TEHT3
         private float PintaAla()
         {
             pinAla = (leveysMm * korkeusMm);
+
             return pinAla;
         }
 
@@ -66,6 +67,12 @@ namespace TEHT3
 
             return test;
         }
+        private void Tekstit()
+        {
+            lasinPa.Text = ((leveysMm * korkeusMm) / 100).ToString("F00") + " CM^2";
+            karmipiiri.Text = karpir.ToString("F00") + " cm";
+            ikkunaPa.Text = test.ToString("F00") + " CM^2";
+        }
 
         private void OnClick(object sender, RoutedEventArgs e)
         {
@@ -75,10 +82,9 @@ namespace TEHT3
                 KarmiPinnat();
                 KarmiPiiri();
                 LaatikonKoko();
-
-                ikkunaPa.Text = test.ToString("F00")+ " CM^2";
-                lasinPa.Text = ((leveysMm * korkeusMm) / 10).ToString("F00") + " CM^2"; 
-                karmipiiri.Text = karpir.ToString("F00")+" cm";
+                Tekstit();
+               
+                
             }
         }
     }

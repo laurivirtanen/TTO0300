@@ -19,9 +19,20 @@ namespace TTO0300
     /// </summary>
     public partial class sup : Window
     {
+        int cnt;
         public sup()
         {
             InitializeComponent();
+            cnt = 0;
+            txtCounter.Text = cnt.ToString();
+        }
+
+        private void btnHi_Click(object sender, RoutedEventArgs e)
+        {
+            txtMessages.Text = "Hello " + txtName.Text;
+            cnt++;
+            txtCounter.Text = cnt.ToString();
+            txtMessages.Text = "Nappi";
         }
     }
 }
