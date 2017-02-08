@@ -5,21 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TEHT3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="640" Width="525">
+        Title="MainWindow" Height="800" Width="1200">
     <Grid>
-        <TextBox x:Name="leveys" HorizontalAlignment="Left" Height="32" Margin="360,45,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <TextBox x:Name="korkeus" HorizontalAlignment="Left" Height="32" Margin="360,90,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <TextBox x:Name="karmil" HorizontalAlignment="Left" Height="32" Margin="360,135,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <Label x:Name="lev" Content="Leveys:" HorizontalAlignment="Left" Margin="290,45,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="kork" Content="Korkeus:" HorizontalAlignment="Left" Margin="290,90,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="karmi" Content="K Leveys:" HorizontalAlignment="Left" Margin="290,135,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="laskin" Content="Button" HorizontalAlignment="Left" Height="54" Margin="360,250,0,0" VerticalAlignment="Top" Width="128" Click="OnClick"/>
-        <TextBox x:Name="IkkunaPa" HorizontalAlignment="Left" Height="32" Margin="360,340,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <TextBox x:Name="LasinPa" HorizontalAlignment="Left" Height="32" Margin="360,385,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <TextBox x:Name="KarmiPiiri" HorizontalAlignment="Left" Height="32" Margin="360,430,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center"/>
-        <Label x:Name="Keskiarvo" Content="Ikkunan KA:" HorizontalAlignment="Left" Margin="290,340,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Lasinp" Content="Lasin PA:" HorizontalAlignment="Left" Margin="290,385,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="kpiiri" Content="K Piiri:" HorizontalAlignment="Left" Margin="290,430,0,0" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="leveys" HorizontalAlignment="Left" Height="32" Margin="1000,45,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="korkeus" HorizontalAlignment="Left" Height="32" Margin="1000,90,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="karmil" HorizontalAlignment="Left" Height="32" Margin="1000,135,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
+        <Label x:Name="lev" Content="Leveys:" HorizontalAlignment="Left" Margin="900,45,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="kork" Content="Korkeus:" HorizontalAlignment="Left" Margin="900,90,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="karmi" Content="K Leveys:" HorizontalAlignment="Left" Margin="900,135,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="laskin" Content="Button" HorizontalAlignment="Left" Height="54" Margin="1000,250,0,0" VerticalAlignment="Top" Width="128" Click="OnClick" Grid.Column="1"/>
+        <TextBox x:Name="ikkunaPa" HorizontalAlignment="Left" Height="32" Margin="1000,340,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="lasinPa" HorizontalAlignment="Left" Height="32" Margin="1000,385,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
+        <TextBox x:Name="karmipiiri" HorizontalAlignment="Left" Height="32" Margin="1000,430,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="128" TextAlignment="Center" Grid.Column="1"/>
+        <Label x:Name="keskiarvo" Content="Ikkunan KA:" HorizontalAlignment="Left" Margin="900,340,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="lasinp" Content="Lasin PA:" HorizontalAlignment="Left" Margin="900,385,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="kpiiri" Content="K Piiri:" HorizontalAlignment="Left" Margin="900,430,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Rectangle x:Name="testaus" HorizontalAlignment="Left" Height="328" Stroke="Black" VerticalAlignment="Center" Width="364" Margin="45,83,0,0">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="file:///D:/K8455/TTO0300/TEHT3/capture.PNG"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        
+
+
+
 
     </Grid>
 </Window>

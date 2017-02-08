@@ -33,19 +33,28 @@ namespace TEHT3
         public MainWindow()
         {
             
-            pintaAla();
+            PintaAla();
             KarmiPinnat();
             InitializeComponent();
             karmil.Text = kpuu.ToString();
         }
 
-        private float pintaAla()
+        private float PintaAla()
         {
             pinAla = (leveysMm * korkeusMm);
             return pinAla;
         }
 
-        private float karmiPiiri()
+        private void LaatikonKoko()
+        {
+            if(korkeusMm < 5000) { testaus.Height = korkeusMm/10; }
+            else { testaus.Height = 500; }
+            if(leveysMm<8500) { testaus.Width = leveysMm/10; }
+            else { testaus.Width = 850; }
+            
+        }
+
+        private float KarmiPiiri()
         {
             karpir = (leveysMm * 2 + korkeusMm * 2)/10;
             return karpir;
@@ -62,13 +71,14 @@ namespace TEHT3
         {
             if (float.TryParse(leveys.Text, out leveysMm) && float.TryParse(korkeus.Text, out korkeusMm) && float.TryParse(karmil.Text, out kpuu))
             {
-                pintaAla();
+                PintaAla();
                 KarmiPinnat();
-                karmiPiiri();
+                KarmiPiiri();
+                LaatikonKoko();
 
-                IkkunaPa.Text = test.ToString("F00")+ " CM^2";
-                LasinPa.Text = ((leveysMm * korkeusMm) / 10).ToString("F00") + " CM^2"; 
-                KarmiPiiri.Text = karpir.ToString("F00")+" cm";
+                ikkunaPa.Text = test.ToString("F00")+ " CM^2";
+                lasinPa.Text = ((leveysMm * korkeusMm) / 10).ToString("F00") + " CM^2"; 
+                karmipiiri.Text = karpir.ToString("F00")+" cm";
             }
         }
     }
