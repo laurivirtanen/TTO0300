@@ -6,13 +6,20 @@
         xmlns:local="clr-namespace:TEHT_2"
         mc:Ignorable="d"
         Title="MainWindow" Height="512" Width="512">
-    <Grid>
+    <Grid VerticalAlignment="Center" Margin="15" HorizontalAlignment="Center" Width="150" Background="#FF47FFEE">
         <Grid.RowDefinitions>
+            <RowDefinition Height="32"/>
+            <RowDefinition Height="32"/>
             <RowDefinition Height="32"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="32"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
+        <TextBlock x:Name="txtLogin" Grid.Row="0" Grid.Column="0" Text="Login" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}"/>
+        <TextBlock x:Name="txtPassword" Grid.Row="1" Grid.Column="0" Text="Password" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}"/>
+        <TextBox x:Name="txbLogin" Grid.Row="0" Grid.Column="1" Margin="8" Width="72" Height="Auto" Background="White"/>
+        <PasswordBox x:Name="pwdPassword" Grid.Row="1" Grid.Column="1" Margin="8" Width="72" Height="Auto" Background="White" Foreground="White"/>
+        <Button x:Name="btnLogin" Click="btnLogin_Click" Grid.Column="1" Grid.Row="2" Width="auto" Margin="4" Height="Auto" Content="Login"/>
     </Grid>
 </Window>
