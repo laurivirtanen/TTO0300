@@ -5,44 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TEHT_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="525" Width="400">
+        Title="MainWindow" Height="525" Width="400" MinWidth="350" MinHeight="350" FontFamily="STENCIL" >
     <Grid x:Name="gridi" Margin="0" Height="Auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="16"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="file:///D:/K8455/TTO0300/TEHT-3/lotto.PNG"/>
         </Grid.Background>
         <StackPanel>
-            <Grid Margin="0" Height="256" VerticalAlignment="Top">
+            <Grid Margin="5" Height="auto" VerticalAlignment="Top">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="128"/>
-                    <RowDefinition Height="128"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" MinWidth="160"/>
+                    <ColumnDefinition Width="*" MinWidth="160"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel>
-                    <TextBlock x:Name="txtChoose" Grid.Row="0" Grid.Column="0" FontSize="16" Text="Choose a game:" Margin="15" HorizontalAlignment="Right"/>
+                    <TextBlock x:Name="txtChoose" Grid.Row="0" Grid.Column="0" FontSize="16" Text="Choose a game:" Margin="15" HorizontalAlignment="Right" />
                     <TextBlock x:Name="txtNumOfDraws" Grid.Row="0" Grid.Column="0" FontSize="16" Text="Number of draws:" Margin="15" HorizontalAlignment="Right"/>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
-                    <ComboBox x:Name="comboBox" SelectionChanged="comboBox_SelectionChanged"  Grid.Column="1" HorizontalAlignment="right" Margin="15"  VerticalAlignment="Top" Width="128" Text="CHANGE">
+                    <ComboBox x:Name="comboBox" SelectionChanged="comboBox_SelectionChanged"  Grid.Column="1" HorizontalAlignment="right"  Margin="15"  VerticalAlignment="Top" Width="128" Text="CHANGE">
                         <ComboBoxItem x:Name="lot" IsSelected="True">Lotto</ComboBoxItem>
                         <ComboBoxItem x:Name="vlot">Viking Lotto</ComboBoxItem>
                         <ComboBoxItem x:Name="elot">Eurojackpot</ComboBoxItem>
                     </ComboBox>
                     <TextBox x:Name="txtGames" Grid.Column="1" HorizontalAlignment="right" Margin="15" VerticalAlignment="Top" Width="32" Text="0"/>
                 </StackPanel>
-                <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Right">
-                    <Button x:Name="btnDraw" Grid.Row="1" Click="btnDraw_Click" Height="32" Width="32" Content="Draw" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="15" />
-                    <TextBlock x:Name="txtRand" Grid.Row="1" Text="Random Numbers: " FontSize="16"/>
+                <StackPanel Grid.Row="1" VerticalAlignment="Top" Width="Auto" HorizontalAlignment="Right">
+                    <Button x:Name="btnDraw" Grid.Row="1" Click="btnDraw_Click" Height="auto" Width="auto"  FontSize="16" Content="Draw" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="15" />
+                    <TextBlock x:Name="txtRand" Grid.Row="1" Text="Random Numbers: " FontSize="18"  Foreground="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}">
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="2" Direction="-1" Color="White" ShadowDepth="1"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
                 </StackPanel>
-                <Button x:Name="btnClear" Click="btnClear_Click"  Grid.Row="1" Grid.Column="1" Height="32" Width="32" Content="Clear" HorizontalAlignment="left" VerticalAlignment="Top" Margin="15" />
+                <Button x:Name="btnClear" Click="btnClear_Click"  Grid.Row="1" Grid.Column="1" Height="auto" Width="auto" Content="Clear" FontSize="16" HorizontalAlignment="left" VerticalAlignment="Top" Margin="15" />
+                <Button x:Name="button" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="101,38,0,0" Grid.Row="1" VerticalAlignment="Top" Click="button_Click" Width="75"/>
 
             </Grid>
-            <ScrollViewer VerticalScrollBarVisibility="Visible" Margin="15" Height="192">
-                <TextBlock x:Name="txtPrint" Margin="0"  Width="Auto" Height="Auto" TextWrapping="Wrap" Text="daa" Background="#7FC3C3C3"/>
-            </ScrollViewer>
-
         </StackPanel>
+        <ScrollViewer x:Name="scvResult" Height="Auto" FontSize="16" VerticalScrollBarVisibility="Visible" MinHeight="30" Margin="15,16,15,14" Content="" Background="#7F191919" Grid.Row="1" Foreground="White"/>
+
     </Grid>
 </Window>
