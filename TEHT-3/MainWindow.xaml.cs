@@ -20,10 +20,59 @@ namespace TEHT_3
     /// </summary>
     public partial class MainWindow : Window
     {
+        string lottoPrint = "";
+
         public MainWindow()
         {
             InitializeComponent();
             
+        }
+
+        private void btnDraw_Click(object sender, RoutedEventArgs e)
+        {
+
+            ImageBrush myBrush = new ImageBrush();
+            Image image = new Image();
+            image.Source = new BitmapImage(new Uri("file:///D:/K8455/TTO0300/TEHT-3/Viking-Lotto.PNG"));
+            myBrush.ImageSource = image.Source;
+
+
+
+
+
+            Lotto lott = new Lotto();
+            int x = 2;
+            Int32.TryParse(txtGames.Text.ToString(), out x);
+            if (lot.IsSelected==true)
+            {
+                image.Source = new BitmapImage(new Uri("file:///D:/K8455/TTO0300/TEHT-3/lotto.PNG"));
+                myBrush.ImageSource = image.Source;
+                gridi.Background = myBrush;
+                txtPrint.Text = lott.Lottery(lottoPrint, x, 7);
+            }
+            else if (vlot.IsSelected == true)
+            {
+                gridi.Background = myBrush;
+                txtPrint.Text = lott.Lottery(lottoPrint, 55, 6);
+            }
+            else if (elot.IsSelected == true)
+            {
+                image.Source = new BitmapImage(new Uri("file:///D:/K8455/TTO0300/TEHT-3/eurojackpot.PNG"));
+                myBrush.ImageSource = image.Source;
+                gridi.Background = myBrush;
+                txtPrint.Text = lott.Lottery(lottoPrint, x, 5);
+            }
+
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtPrint.Text = "";
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
