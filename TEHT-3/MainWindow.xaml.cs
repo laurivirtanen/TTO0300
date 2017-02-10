@@ -83,50 +83,6 @@ namespace TEHT_3
         private void button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(lott.CheckWins());
-            /*
-            try
-            {
-                int tulos = 0;
-                Random test = new Random();
-                int[] result = new int[lott.game];
-                int z;
-
-                for (int i = 0; i < lott.game; i++)
-                {
-                    do
-                    {
-                        z = test.Next(1, 40);
-                    } while (result.Contains(z));
-                    result[i] = z;
-                }
-
-                    scvResult.Content = "";
-                for (int i = 0; i < lott.allthemdraws.GetLength(0); i++)
-                {
-                    int oikein = 0;
-                    for (int j = 0; j < lott.allthemdraws.GetLength(1); j++)
-                    {
-                        if (result.Contains(lott.allthemdraws[i, j]))
-                        {
-                            oikein++;
-                        }
-                    }
-
-                    if (oikein == 7) { tulos += 2400000; scvResult.Content += "\n" + oikein + " oikein, voitit 2 400 000€"; MessageBox.Show(oikein + " oikein, voitit 2 400 000€"); }
-                    else if (oikein == 6) { tulos += 1000; }   //scvResult.Content +="\n"+ oikein + " oikein, voitit 1000€"; MessageBox.Show(oikein + " oikein, voitit 1000€"); }
-                    else if (oikein == 5) { tulos += 50; }   // }// scvResult.Content += "\n" + oikein + " oikein, voitit 50€"; MessageBox.Show(oikein + " oikein, voitit 50€"); }
-                    else if (oikein == 4) { tulos += 10; }   // }scvResult.Content += "\n" + oikein + " oikein, voitit 10€"; MessageBox.Show(oikein + " oikein, voitit 10€"); }
-
-                    { 
-
-                }
-            }
-                MessageBox.Show("Voitit: " + tulos.ToString()) + " euroa";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }*/
         }
         
     }
