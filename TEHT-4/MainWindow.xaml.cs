@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,18 +33,36 @@ namespace TEHT_4
                 MessageBox.Show(ex.Message.ToString());
             }
         }
+        public static double GetDouble(string value, double defaultValue)
+        {
+            double result;
+
+            // Try parsing in the current culture
+            if (!double.TryParse(value, System.Globalization.NumberStyles.Any, CultureInfo.CurrentCulture, out result) &&
+                // Then try in US english
+                !double.TryParse(value, System.Globalization.NumberStyles.Any, CultureInfo.GetCultureInfo("en-US"), out result) &&
+                // Then in neutral language
+                !double.TryParse(value, System.Globalization.NumberStyles.Any, CultureInfo.InvariantCulture, out result))
+            {
+                result = defaultValue;
+            }
+            return result;
+        }
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
             if(double.TryParse(txtInput.Text.ToString(), out input))
             {
+                GetDouble(txtInput.Text.ToString(), input);
                 if ((rdbHumi.IsChecked == true) && (input <= 100f))
                 {
-                    txtHumi.Text = txtInput.Text.ToString();
+                    txtHumi.Text = txtInput.Text.ToString() + "%";
+                    txtInput.Text = "";
                 }
                 else if (rdbTemp.IsChecked == true && input <= 120f)
                 {
-                    txtTemp.Text = txtInput.Text.ToString();
+                    txtTemp.Text = txtInput.Text.ToString() + "°C";
+                    txtInput.Text = "";
                 }
             }
 
@@ -91,7 +110,7 @@ namespace TEHT_4
         }
         private void btnEf(object sender, RoutedEventArgs e)
         {
-            txtInput.Text += ".";
+            txtInput.Text += ",";
         }
         private void btnCan(object sender, RoutedEventArgs e)
         {

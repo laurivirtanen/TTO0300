@@ -5,60 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TEHT_4"
         mc:Ignorable="d"
+        Icon="efc5cfdfabf790c58e1acf288fb5ccac.ico"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="225" Width="450">
+        Title="Heater" Height="225" Width="450" Background="White">
+
     <Grid VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel>
             <TextBlock Grid.Column="0"  Grid.Row="0" Width="auto" Text="Heater" VerticalAlignment="top" HorizontalAlignment="Right" FontFamily="STENCIL" FontSize="48" Margin="0,0,40,0" Foreground="RosyBrown"/>
-            <TextBlock Grid.Column="0"  Grid.Row="0" Width="auto" Text="ultimatum" VerticalAlignment="top" HorizontalAlignment="Right" FontFamily="Arial" FontSize="16" Margin="0,0,40,0"/>
-            
+            <TextBlock Grid.Column="0"  Grid.Row="0" Width="auto" Text="ultimatum" VerticalAlignment="top" HorizontalAlignment="Right" FontFamily="Arial" FontSize="16" Margin="0,0,40,0" Foreground="#FF490707"/>
+
             <StackPanel Orientation="Horizontal"  Margin="0,0,40,0" HorizontalAlignment="Right" >
                 <Label x:Name="lblTemp" Height="auto" Content="Temperature:" Margin="0" FontSize="16" Width="150" FontFamily="Comic sans ms" Foreground="Green"/>
-                <TextBlock x:Name="txtTemp" Text="0" TextAlignment="Right" FontSize="16" VerticalAlignment="Center" MaxWidth="30" Width="30"/>
+                <TextBlock x:Name="txtTemp" Text="0" TextAlignment="Right" FontSize="16" VerticalAlignment="Center" MaxWidth="40" Width="40"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal"  Margin="0,0,40,0" HorizontalAlignment="Right" >
                 <Label x:Name="lblHumi" Height="auto" Content="Humidity:"  FontSize="16"   Width="150" FontFamily="Comic sans ms" Margin="0,0,0,0" Foreground="Green"/>
-                <TextBlock x:Name="txtHumi" Text="0" FontSize="16" TextAlignment="Right" VerticalAlignment="Center" MaxWidth="30" Width="30"/>
+                <TextBlock x:Name="txtHumi" Text="0" FontSize="16" TextAlignment="Right" VerticalAlignment="Center" MaxWidth="40" Width="40"/>
             </StackPanel>
-           
+
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="0" Margin="0">
-            <TextBox x:Name="txtInput" Text="" TextAlignment="Right" Width="auto" Margin="5"  Height="15" BorderBrush="Black"/>
+            <TextBox x:Name="txtInput" Text="" TextAlignment="Right" Width="auto" Margin="5"  Height="15" BorderBrush="Black" Background="#FFE4E0E0"/>
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="btnTopLeft" Content="7" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn7"/>
-                <Button x:Name="btnTopMid" Content="8" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn8"/>
-                <Button x:Name="btnTopRight" Content="9" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btn9"/>
-                <Button x:Name="btnCancel" Content="&#8592;" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btnCan"/>
+                <Button x:Name="btnTopLeft" Content="7" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn7" Background="#FFFDECB2"/>
+                <Button x:Name="btnTopMid" Content="8" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn8" Background="#FFFDECB2"/>
+                <Button x:Name="btnTopRight" Content="9" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btn9" Background="#FFFDECB2"/>
+                <Button x:Name="btnCancel" Content="&#8592;" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btnCan" Background="#FFFDECB2"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Width="150" HorizontalAlignment="Left">
-                <Button x:Name="btnMidLeft" Content="4" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn4"/>
-                <Button x:Name="btnMidMid" Content="5" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn5"/>
-                <Button x:Name="btnMidRight" Content="6" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btn6"/>
+                <Button x:Name="btnMidLeft" Content="4" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn4" Background="#FFFDECB2"/>
+                <Button x:Name="btnMidMid" Content="5" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn5" Background="#FFFDECB2"/>
+                <Button x:Name="btnMidRight" Content="6" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btn6" Background="#FFFDECB2"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Width="150" HorizontalAlignment="Left">
-                <Button x:Name="btnBottomLeft" Content="1" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn1"/>
-                <Button x:Name="btnBottomMid" Content="2" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn2"/>
-                <Button x:Name="btnBottomRight" Content="3" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn3"/>
+                <Button x:Name="btnBottomLeft" Content="1" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn1" Background="#FFFDECB2"/>
+                <Button x:Name="btnBottomMid" Content="2" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn2" Background="#FFFDECB2"/>
+                <Button x:Name="btnBottomRight" Content="3" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40" Click="btn3" Background="#FFFDECB2"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Width="150" HorizontalAlignment="Left">
-                <Button x:Name="btnZero" Content="0" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="90" Click="btn0"/>
-                <Button x:Name="btnDot" Content="." HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btnEf"/>
-                
+                <Button x:Name="btnZero" Content="0" HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="90" Click="btn0" Background="#FFFDECB2"/>
+                <Button x:Name="btnDot" Content="." HorizontalAlignment="Left" Height="20" Margin="5" VerticalAlignment="Top" Width="40"  Click="btnEf" Background="#FFFDECB2"/>
+
             </StackPanel>
             <StackPanel  Orientation="Horizontal">
-                <RadioButton x:Name="rdbTemp" IsChecked="True" Margin="15,5,5,5" Content="Temperature"/>
-                <RadioButton x:Name="rdbHumi" Margin="15,5,5,5" Content="Humidity"/>
+                <RadioButton x:Name="rdbTemp" IsChecked="True" Margin="15,5,5,5" Content="Temperature" Background="White" BorderBrush="#FF7C3B3B"/>
+                <RadioButton x:Name="rdbHumi" Margin="15,5,5,5" Content="Humidity" BorderBrush="#FF632424" Background="White"/>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="btnOk" Content="ok" HorizontalAlignment="Left" Height="80" Margin="155,60,0,0" VerticalAlignment="Top" Width="40" Grid.Column="1" Click="btnOk_Click"/>
+        <Button x:Name="btnOk" Content="ok" HorizontalAlignment="Left" Height="80" Margin="155,60,0,0" VerticalAlignment="Top" Width="40" Grid.Column="1" Click="btnOk_Click" Background="#FFFDECB2"/>
 
     </Grid>
 </Window>
