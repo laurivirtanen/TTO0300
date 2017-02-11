@@ -19,7 +19,7 @@
         </Grid.RowDefinitions>
         <StackPanel HorizontalAlignment="Left">
             <TextBlock Grid.Column="0"  Grid.Row="0" Width="auto" Text="Heater" VerticalAlignment="top" HorizontalAlignment="left" FontFamily="STENCIL" FontSize="48" Margin="20,0,0,0" Foreground="RosyBrown"/>
-            <TextBlock Grid.Column="0"  Grid.Row="0" Width="auto" Text="ultimatum" VerticalAlignment="top" HorizontalAlignment="Right" FontFamily="Arial" FontSize="16" Margin="0,0,0,0" Foreground="#FF971C1C"/>
+            <TextBlock Grid.Column="0"  Grid.Row="0" Width="auto" Text="ultimatum" VerticalAlignment="top" HorizontalAlignment="Right" FontFamily="castellar" FontSize="16" Margin="0,0,0,0" Foreground="#FF971C1C"/>
            
             <Grid Margin="0,12,0,0">
                 <Grid.ColumnDefinitions>
