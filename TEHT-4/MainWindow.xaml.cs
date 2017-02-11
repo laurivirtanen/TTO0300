@@ -25,8 +25,8 @@ namespace TEHT_4
     {
         
         Kiuas kiuas = new Kiuas();
-        RoutedEventArgs test = new RoutedEventArgs();
-        
+        RoutedEventArgs test = new RoutedEventArgs(); // testing for Key down events
+
 
 
         public MainWindow()
@@ -35,7 +35,7 @@ namespace TEHT_4
                 InitializeComponent();
                 btnTemp.ToolTip = "Max temperature for this is: "+ kiuas.maxTemperature.ToString();
                 btnHumi.ToolTip = "Max humidity for this is: " + kiuas.maxHumidity.ToString();
-                txtInput.MaxLength = 3;
+                txtInput.MaxLength = 5;
             }
             catch(Exception ex)
             {
@@ -59,19 +59,22 @@ namespace TEHT_4
             return result;
         }
 
+
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            test = e;
-            if (rdbHumi.IsChecked == true) { txtHumi.Text = kiuas.ChangeHumidity(txtInput.Text.ToString()) + " %";  }
-            else if (rdbTemp.IsChecked == true) { txtTemp.Text = kiuas.ChangeHumidity(txtInput.Text.ToString()) + "°C"; }
+            test = e; // testing for Key down events
+            if (rdbHumi.IsChecked == true) { txtHumi.Text = kiuas.ChangeHumidity(txtInput.Text.ToString()) + " %";  } 
+            else if (rdbTemp.IsChecked == true) { txtTemp.Text = kiuas.ChangeTemperature(txtInput.Text.ToString()) + "°C"; }
             else { MessageBox.Show("Choose temp or humi"); }
             txtInput.Text = "";
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
+            if (txtInput.Text.Length < 5) { 
             var con = ((Button)sender).Content;
             txtInput.Text += con.ToString();
+            }
         }
 
         private void btnCan(object sender, RoutedEventArgs e)
@@ -80,14 +83,14 @@ namespace TEHT_4
             
         }
 
-        private void lblHumi_Click(object sender, RoutedEventArgs e)
+        private void btnHumi_Click(object sender, RoutedEventArgs e)
         {
             rdbHumi.IsChecked = true;
             txtInput.Focusable = true;
             txtInput.Focus();
         }
 
-        private void lblTemp_Click(object sender, RoutedEventArgs e)
+        private void btnTemp_Click(object sender, RoutedEventArgs e)
         {
             rdbTemp.IsChecked = true;
             txtInput.Focusable = true;

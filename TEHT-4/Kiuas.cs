@@ -20,22 +20,23 @@ namespace TEHT_4
             {
                 if(temperature <= maxTemperature && temperature >= 0)
                 {
-                    return temperature.ToString();
+                    return temperature.ToString("F");
                 }
+                else { return "0"; }
             }
             else { return "0"; }
-
-            return "ERROR";
+            
         }
 
         public string ChangeHumidity(string str)
         {
-            if (double.TryParse(str, out humidity))
+            if(double.TryParse(str, out humidity))
             {
-                if (humidity <= maxHumidity && humidity >= 0)
+                if(humidity <= maxHumidity && humidity >= 0)
                 {
-                    return humidity.ToString();
-                }else { return "0"; }
+                    return humidity.ToString("F");
+                }
+                else { return "0"; }
             }
             else { return "0"; }
         }
