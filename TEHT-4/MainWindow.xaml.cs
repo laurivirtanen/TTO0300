@@ -23,20 +23,30 @@ namespace TEHT_4
     
     public partial class MainWindow : Window
     {
-        private double input = 0;
+        
+        Kiuas kiuas = new Kiuas();
+        RoutedEventArgs test = new RoutedEventArgs();
+        
+
+
         public MainWindow()
         {
             try { 
-            InitializeComponent();
-            }catch(Exception ex)
+                InitializeComponent();
+                btnTemp.ToolTip = "Max temperature for this is: "+ kiuas.maxTemperature.ToString();
+                btnHumi.ToolTip = "Max humidity for this is: " + kiuas.maxHumidity.ToString();
+                txtInput.MaxLength = 3;
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
         }
+        
+
         public static double GetDouble(string value, double defaultValue)
         {
             double result;
-
             // Try parsing in the current culture
             if (!double.TryParse(value, System.Globalization.NumberStyles.Any, CultureInfo.CurrentCulture, out result) &&
                 // Then try in US english
@@ -51,75 +61,61 @@ namespace TEHT_4
 
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
-            if(double.TryParse(txtInput.Text.ToString(), out input))
-            {
-                GetDouble(txtInput.Text.ToString(), input);
-                if ((rdbHumi.IsChecked == true) && (input <= 100f))
-                {
-                    txtHumi.Text = txtInput.Text.ToString() + "%";
-                    txtInput.Text = "";
-                }
-                else if (rdbTemp.IsChecked == true && input <= 120f)
-                {
-                    txtTemp.Text = txtInput.Text.ToString() + "°C";
-                    txtInput.Text = "";
-                }
-            }
+            test = e;
+            if (rdbHumi.IsChecked == true) { txtHumi.Text = kiuas.ChangeHumidity(txtInput.Text.ToString()) + " %";  }
+            else if (rdbTemp.IsChecked == true) { txtTemp.Text = kiuas.ChangeHumidity(txtInput.Text.ToString()) + "°C"; }
+            else { MessageBox.Show("Choose temp or humi"); }
+            txtInput.Text = "";
+        }
 
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            var con = ((Button)sender).Content;
+            txtInput.Text += con.ToString();
+        }
 
-        }
-        private void btn1(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "1";
-        }
-        private void btn2(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "2";
-        }
-        private void btn3(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "3";
-        }
-        private void btn4(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "4";
-        }
-        private void btn5(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "5";
-        }
-        private void btn6(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "6";
-        }
-        private void btn7(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "7";
-        }
-        private void btn8(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "8";
-        }
-        private void btn9(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "9";
-        }
-        private void btn0(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += "0";
-        }
-        private void btnEf(object sender, RoutedEventArgs e)
-        {
-            txtInput.Text += ",";
-        }
         private void btnCan(object sender, RoutedEventArgs e)
         {
             if (txtInput.Text.Length > 0) { txtInput.Text = txtInput.Text.Substring(0, txtInput.Text.Length - 1); }
             
         }
 
+        private void lblHumi_Click(object sender, RoutedEventArgs e)
+        {
+            rdbHumi.IsChecked = true;
+            txtInput.Focusable = true;
+            txtInput.Focus();
+        }
+
+        private void lblTemp_Click(object sender, RoutedEventArgs e)
+        {
+            rdbTemp.IsChecked = true;
+            txtInput.Focusable = true;
+            txtInput.Focus();
+        }
+
+        private void txtInput_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.Enter)
+            {
+                btnOk_Click(btnOk, test);
+            }else if (e.Key == Key.Back)
+            {
+                btnCan(btnCancel, e);
+
+            }else if(e.Key == Key.H)
+            {
+                rdbHumi.IsChecked = true;
+            }
+            else if(e.Key == Key.T)
+            {
+                rdbTemp.IsChecked = true;
+            }
+            
 
 
-
+        }
+        }
     }
-}
+
