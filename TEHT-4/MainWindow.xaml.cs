@@ -25,6 +25,8 @@ namespace TEHT_4
     {
         
         Kiuas kiuas = new Kiuas();
+        double temperature;
+        double humidity;
         RoutedEventArgs test = new RoutedEventArgs(); // testing for Key down events
 
 
@@ -63,8 +65,13 @@ namespace TEHT_4
         private void btnOk_Click(object sender, RoutedEventArgs e)
         {
             test = e; // testing for Key down events
-            if (rdbHumi.IsChecked == true) { txtHumi.Text = kiuas.ChangeHumidity(txtInput.Text.ToString()) + " %";  } 
-            else if (rdbTemp.IsChecked == true) { txtTemp.Text = kiuas.ChangeTemperature(txtInput.Text.ToString()) + "°C"; }
+
+            
+            temperature = GetDouble(txtInput.Text, temperature);
+            humidity = GetDouble(txtInput.Text, humidity);
+
+            if (rdbHumi.IsChecked == true) { txtHumi.Text = humidity.ToString() + " %"; } //kiuas.ChangeHumidity(txtInput.Text.ToString()) + " %";  } 
+            else if (rdbTemp.IsChecked == true) { txtTemp.Text = temperature.ToString() + " °C"; } // kiuas.ChangeTemperature(txtInput.Text.ToString()) + "°C"; }
             else { MessageBox.Show("Choose temp or humi"); }
             txtInput.Text = "";
         }
