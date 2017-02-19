@@ -59,9 +59,19 @@
             <Button x:Name="btnBind" Content="Sido olio-kokoelmaan" Click="btnBind_Click"/>
             <TextBox x:Name="txtRightName" Text="{Binding Path=Name}"/>
             <TextBox x:Name="txtRightCity" Text="{Binding Path=City}"/>
-            <Button x:Name="btnBack" Click="btnBack_Click" Content="Back"/>
-            <Button x:Name="btnForward"   Content="Forward" Click="btnForward_Click"/>
-            
+            <Button x:Name="btnBack" Click="btnBack_Click" Content="Edellinen"/>
+            <Button x:Name="btnForward"   Content="Seuraava" Click="btnForward_Click"/>
+            <Separator Height="15" Background="Blue" BorderThickness="0"/>
+            <TextBlock Text="uuden joukkueen lisäys:"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="- Nimi:"/>
+                <TextBox x:Name="txtAddName" Margin="0,0,0,0" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="- Kaupunki:"/>
+                <TextBox x:Name="txtAddCity" Margin="0,0,0,0" Width="100" />
+            </StackPanel>
+            <Button Content="Lisää joukkue liigaan" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Window>

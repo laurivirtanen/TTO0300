@@ -70,15 +70,20 @@ namespace DataBindingDemo
         private void btnForward_Click(object sender, RoutedEventArgs e)
         {
             counter++;
-            if(counter > 4) { counter = 0; }
-            spRight.DataContext = joukkueet[counter];
+            if(counter > joukkueet.Count ) { counter = 1; }
+            spRight.DataContext = joukkueet[counter-1];
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             counter--;
-            if (counter < 0) { counter = 4; }
-            spRight.DataContext = joukkueet[counter];
+            if (counter < 1) { counter = joukkueet.Count; }
+            spRight.DataContext = joukkueet[counter-1];
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            joukkueet.Add(new HockeyTeam(txtAddName.Text.ToString(), txtAddCity.Text.ToString()));
         }
     }
 }
